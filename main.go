@@ -6,15 +6,17 @@ import (
 )
 
 func main() {
-	menu := menu.NewMenu("Chose a colour")
+	menu := menu.NewMenu("Chose an option:")
 
-	menu.AddItem("Red", "red")
-	menu.AddItem("Blue", "blue")
-	menu.AddItem("Green", "green")
-	menu.AddItem("Yellow", "yellow")
-	menu.AddItem("Cyan", "cyan")
+	menu.AddItem("Create a Character", "create")
+	menu.AddItem("Exit", "exit")
 
 	choice := menu.Display()
 
-	fmt.Printf("Choice: %s\n", choice)
+	switch choice {
+	case "create":
+		fmt.Printf("You wnat to create a character!")
+	case "exit":
+		return
+	}
 }

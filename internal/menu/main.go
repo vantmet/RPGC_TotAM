@@ -1,3 +1,5 @@
+// With thanks to Luke Jennings.
+// https://github.com/Nexidian/gocliselect
 package menu
 
 import (
